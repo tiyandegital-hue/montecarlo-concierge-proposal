@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request & Quote — Montecarlo Concierge · Monaco</title><meta name="description" content="Make a request to Montecarlo Concierge — four steps, reviewed personally by Pasquale.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Manrope:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../"><b>MC</b> MONTECARLO CONCIERGE<small>MONACO · PRINCIPAUTÉ</small></a>
+<button class="menu-btn" aria-expanded="false" aria-controls="mainnav">Menu</button>
+<nav class="main" id="mainnav" aria-label="Main navigation"><a href="../">Home</a><a href="../services/">Services</a><a href="../experiences/">Experiences</a><a href="../membership/">Membership</a><a href="../about/">About</a><a href="../how-it-works/">How it Works</a><a href="../contact/">Contact</a></nav>
+<div class="head-actions"><a class="btn ghost" href="../portal/">Portal ↗</a><a class="btn" href="../request/">Make a request</a></div>
+</div></header>
+<main id="main"><section><div class="wrap" style="max-width:860px"><p class="eyebrow">Request &amp; quote flow</p><h1 style="font-size:clamp(48px,7vw,84px)">One request.<br><em>One person.</em></h1>
+<p class="lede" style="margin-top:20px">Four steps, under a minute. Pasquale reviews every request personally and will confirm by email or WhatsApp.</p>
+<div id="request-wizard">
+<div id="wizard-steps">
+<div class="wizard-progress" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+<form id="request-form" novalidate>
+<div class="wizard-step active" data-step="1">
+<p class="eyebrow">Step 1 · Service</p><h2 style="margin:12px 0 24px">What do you need arranged?</h2>
+<div class="field"><div class="pills" role="group" aria-label="Service">
+<button type="button" class="pill" data-service="hotels-villas" aria-pressed="false">Hotels &amp; Villas</button>
+<button type="button" class="pill" data-service="yachts" aria-pressed="false">Yacht Charter</button>
+<button type="button" class="pill" data-service="jets-helicopters" aria-pressed="false">Aviation &amp; Helicopters</button>
+<button type="button" class="pill" data-service="restaurants" aria-pressed="false">Restaurants</button>
+<button type="button" class="pill" data-service="cars-security" aria-pressed="false">Cars &amp; Protection</button>
+<button type="button" class="pill" data-service="bespoke" aria-pressed="false">Bespoke / Multi-service</button>
+</div><p class="error">Please choose a service to continue.</p></div>
+<button type="button" class="btn" data-next>Continue →</button></div>
+<div class="wizard-step" data-step="2">
+<p class="eyebrow">Step 2 · Dates &amp; party</p><h2 style="margin:12px 0 24px">When, and for how many?</h2>
+<div class="field"><label for="arrival">Arrival date</label><input id="arrival" type="date"><p class="error">This field is required.</p></div>
+<div class="field"><label for="departure">Departure date</label><input id="departure" type="date"><p class="error">This field is required.</p></div>
+<div class="field"><label for="guests">Guest count</label><input id="guests" type="number" min="1" max="100" inputmode="numeric"><p class="error">This field is required.</p></div>
+<div class="field"><label for="location">Location / destination</label><input id="location" type="text" autocomplete="off" placeholder="e.g. Monaco, Cap d'Ail, Saint-Tropez"></div>
+<div class="cta-row"><button type="button" class="btn ghost" data-prev>← Back</button><button type="button" class="btn" data-next>Continue →</button></div></div>
+<div class="wizard-step" data-step="3">
+<p class="eyebrow">Step 3 · Details &amp; budget guidance</p><h2 style="margin:12px 0 24px">What would make this flawless?</h2>
+<div class="field"><label for="details">Tell Pasquale what will make this flawless</label><textarea id="details" rows="5"></textarea><p class="error">Please add a few lines so Pasquale understands the brief.</p></div>
+<div class="field"><span class="eyebrow" style="display:block;margin-bottom:12px">Budget guidance — indicative only, confirmed on consultation</span>
+<div class="pills" role="radiogroup" aria-label="Budget guidance">
+<label class="pill"><input type="radio" name="budget" value="€5,000–€15,000" style="width:auto"> €5,000–€15,000</label>
+<label class="pill"><input type="radio" name="budget" value="€15,000–€50,000" style="width:auto"> €15,000–€50,000</label>
+<label class="pill"><input type="radio" name="budget" value="€50,000–€150,000" style="width:auto"> €50,000–€150,000</label>
+<label class="pill"><input type="radio" name="budget" value="€150,000+ / Custom" style="width:auto"> €150,000+ / Custom</label>
+</div></div>
+<div class="cta-row"><button type="button" class="btn ghost" data-prev>← Back</button><button type="button" class="btn" data-next>Review →</button></div></div>
+<div class="wizard-step" data-step="4">
+<p class="eyebrow">Step 4 · Review &amp; send</p><h2 style="margin:12px 0 24px">Review, then transmit.</h2>
+<table style="margin-bottom:24px"><tbody>
+<tr><th>Service</th><td id="summary-service">—</td></tr>
+<tr><th>Dates</th><td id="summary-dates">—</td></tr>
+<tr><th>Guests</th><td id="summary-guests">—</td></tr>
+<tr><th>Location</th><td id="summary-location">—</td></tr>
+<tr><th>Budget guidance</th><td id="summary-budget">—</td></tr>
+<tr><th>Details</th><td id="summary-details">—</td></tr></tbody></table>
+<div class="field"><label for="fullname">Full name</label><input id="fullname" name="name" autocomplete="name"><p class="error">This field is required.</p></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email"><p class="error">Please enter a valid email address.</p></div>
+<div class="field"><label for="phone">WhatsApp phone number (with country code)</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+33 …"><p class="error">This field is required.</p></div>
+<div class="field"><label class="consent" style="display:flex;gap:10px;align-items:flex-start"><input id="consent" type="checkbox" style="width:auto;margin-top:4px"> We use these details solely to handle your request — see <a href="../privacy/">Privacy Policy</a>.</label><p class="error">Please confirm you are happy for us to use these details to handle your request.</p></div>
+<div class="cta-row"><button type="button" class="btn ghost" data-prev>← Back</button><button class="btn" type="submit">Transmit request to Pasquale</button></div></div>
+</form></div>
+<div id="wizard-confirm" class="confirm" style="display:none"><p class="num">REQUEST RECEIVED</p>
+<p class="ref" id="ref-code" style="margin-top:16px">MC-2026-0000</p>
+<h3 style="margin:12px 0">Pasquale is reviewing your parameters personally.</h3>
+<p>Pasquale will confirm by email or WhatsApp. If anything in your brief needs clarifying, he will ask directly — there is no call centre in between.</p>
+<div class="cta-row" style="justify-content:center;margin-top:28px"><a class="btn" data-wa href="https://wa.me/33633967192">Continue on WhatsApp now</a><a class="btn ghost" href="../">Back to home</a></div>
+<p style="margin-top:20px;font-size:13px;color:var(--text-muted)">Demo front-end: this confirmation is shown in your browser. To send a real request, use WhatsApp or email — <a data-email href="mailto:montecarloconcierge1@gmail.com">montecarloconcierge1@gmail.com</a>.</p></div>
+</div></div></section></main>
+<footer class="site"><div class="wrap"><div class="foot-grid">
+<div><h4>Montecarlo Concierge</h4><p>Monaco, Principauté.<br>Every request personally supervised by Pasquale, Founder &amp; CEO.</p>
+<p style="margin-top:16px">WhatsApp <a data-wa href="https://wa.me/33633967192">+33 6 33 96 71 92</a><br>Email <a data-email href="mailto:montecarloconcierge1@gmail.com">montecarloconcierge1@gmail.com</a></p></div>
+<div><h4>Services</h4><ul><li><a href="../services/hotels-villas/">Hotels & Villas</a></li><li><a href="../services/yachts/">Superyachts</a></li><li><a href="../services/jets-helicopters/">Private Jets & Helicopters</a></li><li><a href="../services/cars-security-lifestyle/">Cars, Security & Lifestyle</a></li><li><a href="../services/restaurants-beach-clubs/">Restaurants & Beach Clubs</a></li></ul></div>
+<div><h4>Direct contact</h4><ul><li><a data-wa href="https://wa.me/33633967192">WhatsApp — start a conversation</a></li><li><a data-email href="mailto:montecarloconcierge1@gmail.com">Email the founder's office</a></li><li><a href="../contact/">Contact page</a></li></ul></div>
+<div><h4>Client surface</h4><ul><li><a href="../request/">Request flow</a></li><li><a href="../portal/">Member portal</a></li><li><a href="../membership/">Membership tiers</a></li></ul></div>
+</div><div class="subfoot"><span>© 2026 Montecarlo Concierge. Monaco, Principauté. All rights reserved.</span>
+<span><a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Terms of Service</a> · <a href="../cookies/">Cookie Preferences</a></span></div></div></footer>
+<div class="bot" id="concierge-bot">
+<button class="bot-head" aria-expanded="false"><span class="avatar">MC</span><span><strong>Montecarlo Concierge Desk</strong><small>Typically replies promptly · Demo conversation preview</small></span><span style="margin-left:auto" aria-hidden="true">⌄</span></button>
+<div class="bot-body"><div class="bot-msgs" aria-live="polite"><div class="msg bot-m">Good evening. Welcome to Montecarlo Concierge. How may Pasquale assist you in the Principality today?</div></div>
+<div class="chips"><button class="chip" data-chip="table">Table reservation</button><button class="chip" data-chip="yacht">Yacht charter</button><button class="chip" data-chip="jet">Helicopter / Jet</button><button class="chip" data-chip="villa">Villa accommodation</button></div>
+<a class="btn" data-wa href="https://wa.me/33633967192" style="width:100%">Continue on WhatsApp</a>
+<p class="bot-note">Demo conversation preview · Actual replies are handled by the founder.</p></div></div>
+<div class="cookie" id="cookie-banner" role="dialog" aria-label="Cookie preferences">
+<p><strong>Your privacy, plainly.</strong></p><p style="font-size:14px">This site uses only essential session cookies for the request wizard and the portal demo. No tracking scripts, no advertising cookies.</p>
+<div class="cta-row" style="margin-top:14px"><button class="btn" data-cookie="essential">Essential only</button><button class="btn ghost" data-cookie="accepted">Accept</button><a class="link-arrow" href="../cookies/">Configure →</a></div></div>
+<script src="../assets/js/main.js"></script></body></html>
